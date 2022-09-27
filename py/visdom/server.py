@@ -744,13 +744,13 @@ def get_led_cls(sel_store, env_path):
         def _raw_dict(self):
             return self.data
         def __delitem__(self,key):
-            print(f'{self!r}.__delitem__({key})')
+            # print(f'{self!r}.__delitem__({key})')
             self.store.callback_before_delitem(self,key)
             # print(key in self)
-            print(self)
+            # print(self)
             super().__delitem__(key)
-            print(key in self.data)
-            print(f'{self!r}.__delitem__({key})')
+            # print(key in self.data)
+            # print(f'{self!r}.__delitem__({key})')
             # print(f'{self.__class__}({hex(id(self)})).__delitem__({key})')
             # print(self)
             # self.data.__delitem__(key)
